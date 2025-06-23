@@ -53,7 +53,7 @@ This project is a **real-time Reddit feed pipeline** built with Apache Airflow, 
 ### 🛠️ Data Pipeline
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fda23105-a15b-48a6-b6b4-4a7a1bf1862a" width="600"/>
+  <img src="https://github.com/user-attachments/assets/fda23105-a15b-48a6-b6b4-4a7a1bf1862a" width="200"/>
 </p>
 
  ---
