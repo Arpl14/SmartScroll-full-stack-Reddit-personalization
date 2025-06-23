@@ -3,6 +3,7 @@
 **By Arpita Lonakadi**
 
 ---
+![Screen Recording 2025-06-23 at 3 17 14 PM mov](https://github.com/user-attachments/assets/98e9e173-03e1-4a8d-8f08-edd7b833cf28)
 
 ## 🔥 Summary
 
