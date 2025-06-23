@@ -60,20 +60,20 @@ This project is a **real-time Reddit feed pipeline** built with Apache Airflow, 
 
 ## 💡 Implementation Highlights
 
-- ✅ **Modular Code**: `reddit_pipeline.py` can run standalone or be triggered by Airflow
-- ✅ **LLM Integration**: GPT-3.5 intelligently summarizes long Reddit content into digestible insights
-- ✅ **Auto-saves timestamped files** in `/data/`, ideal for tracking post activity over time
-- ✅ **Airflow DAG** runs `reddit_pipeline()` on schedule or manually
-- ✅ **QuickSight dashboard** visualizes post volume, trending terms, and subreddit category splits
+-  **Modular Code**: `reddit_pipeline.py` can run standalone or be triggered by Airflow
+-  **LLM Integration**: GPT-3.5 intelligently summarizes long Reddit content into digestible insights
+-  **Auto-saves timestamped files** in `/data/`, ideal for tracking post activity over time
+-  **Airflow DAG** runs `reddit_pipeline()` on schedule or manually
+-  **QuickSight dashboard** visualizes post volume, trending terms, and subreddit category splits
 
 ---
 
 ## 🏆 Achievements
 
-- ⏱️ Reduced Reddit content overload into a 10-second digest  
-- 💡 Enabled explainable AI use in social media consumption  
-- 📊 Built a production-style BI dashboard on user content  
-- 🐳 Dockerized pipeline for repeatable, scalable use  
+-  Reduced Reddit content overload into a 10-second digest  
+-  Enabled explainable AI use in social media consumption  
+-  Built a production-style BI dashboard on user content  
+-  Dockerized pipeline for repeatable, scalable use  
 
 ---
 ## Conclusion:
