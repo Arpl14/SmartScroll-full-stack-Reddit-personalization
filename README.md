@@ -135,9 +135,11 @@ streamlit run app.py
 
 Or Trigger via Airflow (ETL automation)
 docker-compose up airflow-init
+-----
 
 ## Conclusion:
 This project brings together the power of data engineering, automation, and generative AI to solve a modern attention problem: content overload. Instead of passively consuming what algorithms push, you get to custom-build your own feed, enriched with GPT-powered summaries and analytics.
 
 Built by Arpita Lonakadi — no more doomscrolling. Build your own feed.
 docker-compose up
+
