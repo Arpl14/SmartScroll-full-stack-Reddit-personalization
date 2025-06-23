@@ -51,6 +51,7 @@ This project is a **real-time Reddit feed pipeline** built with Apache Airflow, 
 - **Docker** + **Docker Compose** for containerization  
 
 ### 🛠️ Data Pipeline
+
 ![reddit_data_pipeline](https://github.com/user-attachments/assets/fda23105-a15b-48a6-b6b4-4a7a1bf1862a)
 
  ---
@@ -104,6 +105,5 @@ streamlit run app.py
 
 Or Trigger via Airflow (ETL automation)
 docker-compose up airflow-init
------
 
 
