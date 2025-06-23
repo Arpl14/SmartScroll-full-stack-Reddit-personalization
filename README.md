@@ -1,34 +1,35 @@
 # SmartScroll-AI-powered personalized Reddit feed#
-*Built to combat doomscrolling with Data Engineering + LLM magic*  
+*Built to effectively learn rather than doomscroll from social media with Data Engineering + LLM magic*  
 **By Arpita Lonakadi**
 
 ---
 
 ## 🔥 Summary
 
-This project is a **real-time Reddit feed pipeline** built with Apache Airflow, GPT-3.5, and AWS — designed to extract content from Reddit, summarize it using LLMs, store the results in the cloud, and visualize it in an insightful dashboard.
+This project is a **real-time Reddit feed pipeline** built with Apache Airflow, GPT-3.5, and AWS — designed to extract content user is interested in from Reddit, summarize it using LLMs, store the results in the cloud, and visualize it in an insightful dashboard.
 **No more doomscrolling.** Instead, this app curates and compresses Reddit content into bite-sized insights that respect your time and focus.
 
 ---
 
-## 🧭 Project Overview
+## ⚙️ How It Works
 
-This end-to-end data platform automatically:
+1. **User selects topics he is interested in** in the app UI.
+2.	Apache Airflow DAG is triggered to run the data pipeline asynchronously on demand or by schedule.
+3.	The app fetches relevant posts using the Reddit API (via PRAW).
+4.	Each post is optionally summarized using GPT-3.5, compressing long content into crisp summaries.
+5.	A structured CSV is created and automatically uploaded to AWS S3.
+6.  A Glue Crawler is configured to automatically scan the S3 bucket.
+7.  Athena queries the Glue Catalog table directly, enabling serverless SQL access to Reddit posts 
 
-- Extracts trending posts from user-selected subreddits using Reddit’s API
-- Summarizes the posts using OpenAI’s GPT-3.5 (LLM integration)
-- Stores CSV outputs in Amazon S3 via a version-controlled timestamp
-- Loads data to AWS Glue and queries it with Amazon Athena
-- Displays insights on an Amazon QuickSight dashboard
-- Offers a Streamlit UI for custom user input + feed download
-
-The pipeline is **automated using Apache Airflow**, making it scalable and production-ready.
-
+9.  In **Amazon QuickSight**, the data is visualized as:
+   - Posts over time
+   - Category split
+   - Trending post titles (word cloud)
 ---
 
 ## ✨ Key Features
 
-- 🎯 Custom subreddit selection  
+- 🎯 Custom topic selection  
 - 🤖 GPT-powered content summarization (via OpenAI API)  
 - ☁️ Cloud storage using Amazon S3  
 - 🔁 Automated orchestration via Apache Airflow  
@@ -50,29 +51,9 @@ The pipeline is **automated using Apache Airflow**, making it scalable and produ
 - **Docker** + **Docker Compose** for containerization  
 
 ### 🛠️ Data Pipeline
+![reddit_data_pipeline](https://github.com/user-attachments/assets/fda23105-a15b-48a6-b6b4-4a7a1bf1862a)
 
-                 ┌────────────────────┐
-                 │ Airflow DAG Trigger│
-                 └─────────┬──────────┘
-                           │
-                           ▼
-            [Reddit API via PRAW to Fetch Posts]
-                           │
-                           ▼
-  [OpenAI GPT-3.5 to Summarize Posts (LLM Integration)]
-                           │
-                           ▼
-             [Save CSV Locally → Upload to S3]
-                           │
-                           ▼
-     [AWS Glue Crawler → Athena SQL → QuickSight Dash]
-                           │
-                           ▼
-         [Streamlit App for Custom Feeds + Download]
-
-
-
-         ---
+ ---
 
 ## 💡 Implementation Highlights
 
@@ -84,20 +65,6 @@ The pipeline is **automated using Apache Airflow**, making it scalable and produ
 
 ---
 
-## ⚙️ How It Works
-
-1. **User selects subreddits** in the app UI.
-2. The app fetches posts using the Reddit API.
-3. Each post is **optionally summarized by GPT**.
-4. A structured CSV is created and **uploaded to AWS S3**.
-5. Using **AWS Glue + Athena**, the CSV is queried.
-6. In **Amazon QuickSight**, the data is visualized as:
-   - Posts over time
-   - Category split
-   - Trending post titles (word cloud)
-
----
-
 ## 🏆 Achievements
 
 - ⏱️ Reduced Reddit content overload into a 10-second digest  
@@ -106,6 +73,8 @@ The pipeline is **automated using Apache Airflow**, making it scalable and produ
 - 🐳 Dockerized pipeline for repeatable, scalable use  
 
 ---
+## Conclusion:
+This project brings together the power of data engineering, automation, and generative AI to solve a modern attention problem: content overload. Instead of passively consuming what algorithms push, you get to custom-build your own feed, enriched with GPT-powered summaries and analytics.
 
 ## ▶️ How to Use
 
@@ -137,9 +106,4 @@ Or Trigger via Airflow (ETL automation)
 docker-compose up airflow-init
 -----
 
-## Conclusion:
-This project brings together the power of data engineering, automation, and generative AI to solve a modern attention problem: content overload. Instead of passively consuming what algorithms push, you get to custom-build your own feed, enriched with GPT-powered summaries and analytics.
-
-Built by Arpita Lonakadi — no more doomscrolling. Build your own feed.
-docker-compose up
 
