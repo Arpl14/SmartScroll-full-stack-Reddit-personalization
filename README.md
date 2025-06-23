@@ -29,13 +29,15 @@ This project is a **real-time Reddit feed pipeline** built with Apache Airflow, 
 
 ## ✨ Key Features
 
-- 🎯 Custom topic selection  
-- 🤖 GPT-powered content summarization (via OpenAI API)  
-- ☁️ Cloud storage using Amazon S3  
-- 🔁 Automated orchestration via Apache Airflow  
-- 📊 BI dashboard (QuickSight) with feed trends + word clouds  
-- 🖥️ Streamlit frontend with image previews  
-- 🐳 Dockerized environment for reproducible setup  
+	•	🎯 Custom topic selection
+	•	🤖 GPT-powered content summarization (via OpenAI API)
+	•	☁️ Cloud storage using Amazon S3
+	•	🧠 Schema discovery via AWS Glue Crawler
+	•	🔍 Serverless querying using Amazon Athena
+	•	🔁 Automated orchestration via Apache Airflow
+	•	📊 BI dashboard (QuickSight) with feed trends + word clouds
+	•	🖥️ Streamlit frontend with image previews
+	•	🐳 Dockerized environment for reproducible setup
 
 ---
 
