@@ -14,15 +14,14 @@ This project is a **real-time Reddit feed pipeline** built with Apache Airflow, 
 
 ## ⚙️ How It Works
 
-1. **User selects topics he is interested in** in the app UI.
-2.	Apache Airflow DAG is triggered to run the data pipeline asynchronously on demand or by schedule.
-3.	The app fetches relevant posts using the Reddit API (via PRAW).
-4.	Each post is optionally summarized using GPT-3.5, compressing long content into crisp summaries.
-5.	A structured CSV is created and automatically uploaded to AWS S3.
-6.  A Glue Crawler is configured to automatically scan the S3 bucket.
-7.  Athena queries the Glue Catalog table directly, enabling serverless SQL access to Reddit posts 
-
-9.  In **Amazon QuickSight**, the data is visualized as:
+	1.	User selects topics they are interested in via the Streamlit app UI.
+	2.	Apache Airflow DAG is triggered to run the data pipeline asynchronously—either on demand or on a schedule.
+	3.	The app fetches top trending posts from each subreddit using the Reddit API (via PRAW), prioritizing posts ranked by Reddit’s hot algorithm (based on score and recency).
+	4.	Each post is optionally summarized using OpenAI GPT-3.5, compressing long content into crisp summaries.
+	5.	A structured CSV is created and automatically uploaded to AWS S3.
+	6.	An AWS Glue Crawler scans the S3 bucket to detect and catalog schema changes.
+	7.	Amazon Athena queries the Glue Catalog table directly, enabling serverless SQL access to Reddit post data.
+   9.  In Amazon QuickSight, the data is visualized as:
    - Posts over time
    - Category split
    - Trending post titles (word cloud)
