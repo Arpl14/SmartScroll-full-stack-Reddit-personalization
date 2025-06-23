@@ -1,4 +1,4 @@
-# SmartScroll-AI-powered personalized Reddit feed#
+# SmartScroll-AI-powered personalized Reddit feed
 *Built to effectively learn rather than doomscroll from social media with Data Engineering + LLM magic*  
 **By Arpita Lonakadi**
 
