@@ -1,0 +1,6 @@
+apache-airflow==2.7.1
+praw
+pandas
+s3fs
+configparser
+openai
