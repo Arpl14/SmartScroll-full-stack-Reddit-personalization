@@ -50,7 +50,7 @@ This project is a **real-time Reddit feed pipeline** built with Apache Airflow, 
 - **Streamlit** for user-facing UI  
 - **Docker** + **Docker Compose** for containerization  
 
-### 🛠️ Data Pipeline
+### 🛠️ Data Pipeline###
 
 ![reddit_data_pipeline](https://github.com/user-attachments/assets/fda23105-a15b-48a6-b6b4-4a7a1bf1862a)
 
